@@ -20,7 +20,11 @@ function getData(url){
            generalList.push(planetList[property])
        }
        printData(generalList)
-       next = json.next.replace('http', 'https');
+       if(json.next){
+        next = json.next.replace('http', 'https');
+       }else {
+        next = '';
+       }
        loadMore = true;
     })
     .catch(error => {
