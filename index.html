@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars Planets</title>
+    <link rel="stylesheet" href="./assets/styles/starWars.css">
+    <link rel="icon" href="./assets/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js" type="text/javascript"></script>
+
+</head>
+<body>
+    <div class="planets">
+        <header class="planets-header">
+            <img src="https://www.freepnglogos.com/uploads/star-wars-logo-1.png" class="sw-logo" alt="Star Wars" />
+            <div class="subHeader">
+                <h1 class="main-title">Planet List</h1>
+                <div class="filters">
+                    <p>Sort </p>
+                    <button onclick="orderPlanets()">By name</button>
+                    <button onclick="orderPopulation()">By population</button>
+                </div>
+            </div>
+        </header>
+        <div id="root" class="planet-list">
+        </div>
+  </div>
+  <div class="modal" id="modal">
+      <div class="modal-layer" onclick="closeModal()"></div>
+      <div class="modal-container">
+          <button class="close-button" onclick="closeModal()">X</button>
+          <div class="card">
+              <div class="card__image">
+                  <img src="https://www.sciencemag.org/sites/default/files/styles/article_main_large/public/planet_1280p.jpg?itok=07tueTM9" alt="this.planetData.name" />
+              </div>
+              <div id="planetInfo"></div>
+              </div>
+          </div>
+      </div>
+  </div>
+<script type="text/javascript" src="./assets/scripts/scripts.js"></script>
+</body>
+</html>
