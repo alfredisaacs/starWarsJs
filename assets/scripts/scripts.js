@@ -21,7 +21,6 @@ function getData(url){
        }
        printData(generalList)
        next = json.next.replace('http', 'https');
-       console.log(next)
        loadMore = true;
     })
     .catch(error => {
