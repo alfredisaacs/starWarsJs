@@ -17,6 +17,16 @@ body {
     top:0;
     width:100%;
 }
+.search {
+    background: black;
+    color: white;
+    border: 1px solid gray;
+    font-size: 10px;
+    padding: 0 5px;
+    height: 2.5em;
+    margin: 4px 15px 0 0;
+    width: 12em;
+}
 .main-title {
     color:dodgerblue;
     font-family: 'Oswald', sans-serif;
@@ -52,7 +62,7 @@ body {
     border:none;
     color:white;
     cursor:pointer;
-    font-size:11px;
+    font-size:10px;
     height:35px;
     margin-right:5px;
     padding:2px 15px;
@@ -267,6 +277,29 @@ body {
         left:10%;
         width:80%;
     }
+    .search {
+        display: block;
+        font-size:9px;
+        margin:0px auto;
+        width:7em;
+    }
+    .subHeader {
+        display: block;
+        padding:10px;
+    }
+    .filters {
+        display: flex;
+        margin:10px auto;
+        text-align: center;
+    }
+    .filters p {
+        font-size:8px;
+        margin:8px 10px 0 0;
+    }
+    .filters button {
+        font-size:8px;
+        height:25px;
+    }
 }
 @media screen and (max-width: 480px) {
     .sw-logo {
@@ -274,6 +307,7 @@ body {
     }
     .subHeader {
         display:block;
+        padding:0;
     }
     .filters {
         margin-top:10px;

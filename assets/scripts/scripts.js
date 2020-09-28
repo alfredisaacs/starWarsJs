@@ -6,6 +6,8 @@ let next = '';
 let plainUrl = '';
 let modal = document.getElementById("modal");
 let loadMore = false;
+let searchData = '';
+let newArray = [];
 
 //Methods
 //Fetch api to get planet list
@@ -161,6 +163,25 @@ function orderPlanets(){
   printData(generalList)
 }
 
+//Filter using the search input
+function filter() {
+  searchData = document.getElementById("search").value.toUpperCase();
+  if(searchData.length) {
+      newArray = generalList.filter(function (el) {
+        return el.name.toUpperCase().includes(searchData)
+    });
+  } else {
+      newArray = generalList;
+  }
+  printData(newArray)  
+}
+
+//Initialize search
+function searchText(){
+  document.getElementById("search").addEventListener("input", filter);
+}
+
 //Initialize
 getData(url);
 scroll();
+searchText();
