@@ -96,8 +96,10 @@ function printPlanet(result){
 function showDetail(){
   document.addEventListener('click', function(e) {
     e = e || window.event;
-    var target = e.target || e.srcElement,
-        plainUrl = target.value.replace('http', 'https');   
+    var target = e.target || e.srcElement;
+      if(target.value){
+        plainUrl = target.value.replace('http', 'https');
+      }   
         getPlanet(plainUrl)
   }, false);
   modal.style.display = 'block';
